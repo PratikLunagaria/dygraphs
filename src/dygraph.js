@@ -65,6 +65,8 @@ import ChartLabelsPlugin from './plugins/chart-labels';
 import GridPlugin from './plugins/grid';
 import LegendPlugin from './plugins/legend';
 import RangeSelectorPlugin from './plugins/range-selector';
+import HairlinesPlugin from './extras/hairlines';
+import SuperAnnotationsPlugin from './extras/super-annotations';
 
 import GVizChart from './dygraph-gviz';
 
@@ -3422,7 +3424,9 @@ Dygraph.PLUGINS = [
   RangeSelectorPlugin, // Has to be before ChartLabels so that its callbacks are called after ChartLabels' callbacks.
   ChartLabelsPlugin,
   AnnotationsPlugin,
-  GridPlugin
+  GridPlugin,
+  HairlinesPlugin,
+  SuperAnnotationsPlugin
 ];
 
 // There are many symbols which have historically been available through the
@@ -3446,7 +3450,9 @@ Dygraph.Plugins = {
   Annotations: AnnotationsPlugin,
   ChartLabels: ChartLabelsPlugin,
   Grid: GridPlugin,
-  RangeSelector: RangeSelectorPlugin
+  RangeSelector: RangeSelectorPlugin,
+  Hairlines : HairlinesPlugin,
+  SuperAnnotations: SuperAnnotationsPlugin
 };
 
 Dygraph.DataHandlers = {
