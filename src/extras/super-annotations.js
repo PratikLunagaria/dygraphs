@@ -10,8 +10,8 @@
  */
 
 /*global Dygraph:false */
-
-Dygraph.Plugins.SuperAnnotations = (function() {
+import Dygraphs from '../dygraph'
+const superAnnotations = () => {
 
 "use strict";
 
@@ -472,4 +472,6 @@ annotations.prototype.set = function(annotations) {
 
 return annotations;
 
-})();
+}
+
+export default superAnnotations;

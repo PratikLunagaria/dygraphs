@@ -10,8 +10,8 @@
  */
 
 /*global Dygraph:false */
+import Dygraph from '../dygraph';
 
-Dygraph.Plugins.Hairlines = (function() {
 
 "use strict";
 
@@ -29,7 +29,7 @@ Dygraph.Plugins.Hairlines = (function() {
 // double-click to unzoom. This sets that delay period.
 var CLICK_DELAY_MS = 300;
 
-var hairlines = function(opt_options) {
+const hairlines = function(opt_options) {
   /* @type {!Array.<!Hairline>} */
   this.hairlines_ = [];
 
@@ -454,6 +454,4 @@ hairlines.prototype.set = function(hairlines) {
   $(this).triggerHandler('hairlinesChanged', {});
 };
 
-return hairlines;
-
-})();
+export default hairlines;
